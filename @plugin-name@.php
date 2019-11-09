@@ -39,5 +39,15 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function activate_@plugin-name@() {
 	require_once @plugin-const@_PATH . 'inc/@plugin-name@-activation.php';
-	Jt_Product_Checklists_Activator::activate();
 }
+
+register_activation_hook( __FILE__, 'activate_@plugin-name@' );
+
+ /**
+ * 
+ */
+ function activate_@plugin-name@() {
+	require_once @plugin-const@_PATH . 'inc/@plugin-name@-activation.php';
+}
+
+register_deactivation_hook( __FILE__, 'deactivate_@plugin-name@' );

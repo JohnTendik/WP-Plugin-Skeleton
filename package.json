@@ -1,6 +1,7 @@
 {
   "name": "WP-Plugin-Skeleton",
   "slug": "wp-plugin-skeleton",
+  "const": "WP_PLUGIN_SKELETON",
   "version": "1.0.0",
   "description": "Bare bones starter plugin for WordPress.",
   "main": "index.js",
