@@ -1,0 +1,20 @@
+{
+  "name": "WP-Plugin-Skeleton",
+  "version": "1.0.0",
+  "description": "Bare bones starter plugin for WordPress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnTendik/WP-Plugin-Skeleton.git"
+  },
+  "keywords": [],
+  "author": "John Tendik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnTendik/WP-Plugin-Skeleton/issues"
+  },
+  "homepage": "https://github.com/JohnTendik/WP-Plugin-Skeleton#readme"
+}
