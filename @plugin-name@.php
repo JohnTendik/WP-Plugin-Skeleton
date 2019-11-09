@@ -46,8 +46,18 @@ register_activation_hook( __FILE__, 'activate_@plugin-name@' );
  /**
  * 
  */
- function activate_@plugin-name@() {
-	require_once @plugin-const@_PATH . 'inc/@plugin-name@-activation.php';
+ function deactivate_@plugin-name@() {
+	require_once @plugin-const@_PATH . 'inc/@plugin-name@-deactivation.php';
 }
 
 register_deactivation_hook( __FILE__, 'deactivate_@plugin-name@' );
+
+require @plugin-const@_PATH . 'lib/class-@plugin-name@.php';
+
+function run_@plugin-name@() {
+
+	$plugin = new @plugin-name@();
+	$plugin->run();
+
+}
+run_@plugin-name@();
