@@ -29,6 +29,8 @@ class JT_LIMIT_PURCHASE {
 
     add_filter( 'woocommerce_add_to_cart_validation', array($this, 'filter_woocommerce_add_to_cart_validation'), 10, 3 ); 
 
+    // Validate country on checkout just in case we miss the add to cart validation
+    add_action( 'woocommerce_after_checkout_validation', array($this, 'validate_checkout'), 10, 2 );
   }
 
   function do_admin() {
@@ -75,6 +77,15 @@ class JT_LIMIT_PURCHASE {
     }
     
     return $isValid;
+  }
+
+  function validate_checkout($data, $errors) {
+    foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+      // if a product is restricted to USA then add an error
+      if ( ! $this->can_purchase($cart_item['data']->id, $cart_item['quantity']) ) {
+        $errors->add('quantity', sprintf(__( 'There is a 2 per person purchase limit for %s.', 'woocommerce' ), $cart_item['data']->get_title()));
+      }
+    }
   }
   
 }

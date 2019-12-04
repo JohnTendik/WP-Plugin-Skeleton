@@ -10,7 +10,7 @@
  * Plugin Name:       JT Limit Purchase
  * Plugin URI:        johntendik.com
  * Description:       JT Limit Purchase description
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            John Tendik
  * Author URI:        johntendik.com
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * JT Limit Purchase version
  */
- define( 'JT_LIMIT_PURCHASE_VERSION', '1.0.0' );
+ define( 'JT_LIMIT_PURCHASE_VERSION', '1.0.1' );
 
  /**
  * JT Limit Purchase path contant to be used throughout
