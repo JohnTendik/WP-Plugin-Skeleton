@@ -6,8 +6,8 @@
  * @link       johntendik.com
  * @since      1.0.0
  *
- * @package    @plugin-name@
- * @subpackage @plugin-name@/includes
+ * @package    jt_limit_purchase_Activator
+ * @subpackage jt_limit_purchase_Activator/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    @plugin-name@
- * @subpackage @plugin-name@/includes
+ * @package    jt_limit_purchase_Activator
+ * @subpackage jt_limit_purchase_Activator/includes
  * @author     John Tendik <johntendik@hotmail.com>
  */
-class @plugin-name@_Deactivator {
+class jt_limit_purchase_Activator_Deactivator {
 
 	/**
 	 * Short Description. (use period)
