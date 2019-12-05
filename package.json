@@ -3,6 +3,7 @@
   "prettyName": "JT Limit Purchase",
   "slug": "jt_limit_purchase",
   "const": "JT_LIMIT_PURCHASE",
+  "className": "JT_Limit_Purchase",
   "version": "1.0.0",
   "description": "Bare bones starter plugin for WordPress.",
   "main": "index.js",
