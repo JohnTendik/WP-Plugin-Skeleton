@@ -1,7 +1,8 @@
 {
-  "name": "WP-Plugin-Skeleton",
-  "slug": "wp-plugin-skeleton",
-  "const": "WP_PLUGIN_SKELETON",
+  "name": "jt-limit-purchase",
+  "prettyName": "JT Limit Purchase",
+  "slug": "jt_limit_purchase",
+  "const": "JT_LIMIT_PURCHASE",
   "version": "1.0.0",
   "description": "Bare bones starter plugin for WordPress.",
   "main": "index.js",
