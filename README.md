@@ -18,15 +18,13 @@ When you first clone this project you will notice that there are a bunch of `@pl
 
 By the way, you never want to limit a purchase so ignore my plugin name above as an example.
 
-**name** This is your regular npm package name for the project. Cannot include spaces, numbers, capitals or weird characters.
-
-**prettyName** This is your plugin name but pretty. This is the name that will display in the plugins menu option in WordPress.
-
-**slug** This is your plugin name slug. Lowercase and underscored.
-
-**const** This is your plugin name constant. This is ALL CAPS AND UNDERSCORED.
-
-**className** This is your plugin class name. Classes are usually camel cased and underscored.
+| Name  | Description |
+| ------------- | ------------- |
+| **name**  | This is your regular npm package name for the project. Cannot include spaces, numbers, capitals or weird characters.  |
+| **prettyName**  | This is your plugin name but pretty. This is the name that will display in the plugins menu option in WordPress.  |
+| **slug**  | This is your plugin name slug. Lowercase and underscored.  |
+| **const**  | This is your plugin name constant. This is ALL CAPS AND UNDERSCORED.  |
+| **className**  | This is your plugin class name. Classes are usually camel cased and underscored.  |
 
 
 2) run `npm run generate`
