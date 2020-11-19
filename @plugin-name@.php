@@ -38,7 +38,7 @@ require @plugin-const@_PATH . 'lib/class-@plugin-name@.php';
 
 function run_@plugin-slug@() {
 
-	$plugin = @plugin-className@()::get_instance();
+	$plugin = @plugin-className@::get_instance();
   $plugin::register_hooks();
   
 }
