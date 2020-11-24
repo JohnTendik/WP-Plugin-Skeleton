@@ -39,7 +39,23 @@ require @plugin-const@_PATH . 'lib/class-@plugin-name@.php';
 function run_@plugin-slug@() {
 
 	$plugin = @plugin-className@::get_instance();
-  $plugin::register_hooks();
+	$plugin::register_hooks();
+	
+	$updaterAvailable = false;
+	
+	if ($updaterAvailable) {
+		// This should only be run after creating the github repo otherwise you will see errors when you activate the plugin.
+
+		if( ! class_exists( 'JT_Plugin_Updater' ) ){
+			include_once( PLUGIN_NAME_PATH . 'inc/updater.php' );
+		}
+		
+		$updater = new JT_Plugin_Updater( __FILE__ );
+		$updater->set_username( 'github-username' );
+		$updater->set_repository( 'github-repository-name' );
+		$updater->authorize( 'github-user-token' ); // Your auth code goes here for private repos
+		$updater->initialize();
+	}
   
 }
 
