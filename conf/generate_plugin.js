@@ -18,14 +18,15 @@ const traverseFolders = async(curPath) => {
   // Get all files in the current folder
   const files = fs.readdirSync(curPath);
   files.reduce(async(prevPromise, filePath) => {
+    let fullPath = path.join(curPath, filePath);
     if (filePath.includes('.php')) {
       await innerRename(curPath, filePath)
     }
     if (filePath.includes('@plugin-name@')) {
-      await renameFile(curPath, filePath);
+      fullPath = await renameFile(curPath, filePath);
     }
-    if (fs.statSync(path.join(curPath, filePath)) && fs.statSync(path.join(curPath, filePath)).isDirectory() && filePath !== '.git') {
-      traverseFolders(path.join(curPath, filePath))
+    if (fs.statSync(fullPath) && fs.statSync(fullPath).isDirectory() && filePath !== '.git') {
+      traverseFolders(fullPath)
     }
     Promise.resolve();
   }, Promise.resolve());
@@ -36,7 +37,7 @@ const renameFile = (curPath, filePath) => {
   return new Promise((res) => {
     const newName = filePath.replace('@plugin-name@', pluginName);
     fs.renameSync(path.join(curPath, filePath), path.join(curPath, newName));
-    res();
+    res(path.join(curPath, newName));
   });
 }
 
